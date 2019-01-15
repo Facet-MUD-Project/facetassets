@@ -1,0 +1,26 @@
+title = "A boring old room"
+description = "placeholder that is replaced by hooks"
+
+[exits]
+    [exits.north]
+        desc = "Spoopy woods lead off to the north"
+        dest = "spoopy_woods"
+    [exits.south]
+        desc = "A packed earth road leads back to the boring city"
+        dest = "boring_citygate"
+
+[contents]
+objects = [ ["armor@james_woods", "sword@city"], [1, 2]]
+enemies = [ ["orc@james_woods"], [2]]
+
+[hooks]
+    [hooks.description]
+    code = """
+  var time = get_time()
+  if time >= 1800 and time <= 0600 then
+    description =  "In blackest night"
+  else if time > 0600 and time < 1200 then
+    description = "In brightest day"
+  else
+    description = "Let those who worship evil's might\nBeware my power--Green Lantern's light!"
+"""
