@@ -1,26 +1,50 @@
-title = "A boring old room"
-description = "placeholder that is replaced by hooks"
+title = "Entrance to the spooky woods"
+description = "This is the end of the forest canopy of the spooky woods. The edge of the spooky woods opens to the edge of barely forested hills and well tended farmlands. The trail through the woods becomes a rough packed road that leads down to a walled city that can be seen to the south."
 
 [exits]
     [exits.north]
-        desc = "Spoopy woods lead off to the north"
-        dest = "spoopy_woods"
+        desc = "The trail leads further to the north"
+        dest = "spooky_woods@woods"
     [exits.south]
-        desc = "A packed earth road leads back to the boring city"
-        dest = "boring_citygate"
+        desc = "A packed earth road leads down to the farmlands surrounding city"
+        dest = "city_farmlands@city"
 
 [contents]
-objects = [ ["armor@james_woods", "sword@city"], [1, 2]]
-enemies = [ ["orc@james_woods"], [2]]
+objects = [ ["armor@woods", "sword@city"], [1, 2]]
+enemies = [ ["orc@woods"], [2]]
+
+[sights]
+    [sights.city]
+        target = "city"
+        desc   = "Protected by a fortified stone wall, this large city sits on the coast and is surrounded by farmalnd."
+    [sights.woods]
+        target = "woods"
+        desc   = "Dark and mysterious, these woods have had many a traveller enter and never leave."
+    [sights.trail]
+        target = "trail"
+        desc   = "Well worn into the forest floor, this trail winds through the spooky woods."
+    [sights.road]
+        target = "road"
+        desc   = "A trail that was turned into a packed earth road leads from the woods to the city. Multiple cart ruts can be seen carved into it."
+
+[sounds]
+    [sounds.default]
+        target = 0
+        desc = "The guttural grunts and snorts of orcs can be hear close by. They must be looking for travellers to waylay."
+
+[smells]
+    [smells.default]
+        target = 0
+        desc = "Not only is the scent of forest decay on the air, but the pungent unwashed odor of orcs as well!"
 
 [hooks]
-    [hooks.description]
+    [hooks.onDescribe]
     code = """
   var time = get_time()
   if time >= 1800 and time <= 0600 then
-    description =  "In blackest night"
-  else if time > 0600 and time < 1200 then
-    description = "In brightest day"
+    description +=  "Darkness permeates these woods at night making it impossible to see much of the trail for farther than a few yards."
+  else if time > 0600 and time < 1600 then
+    description += "The early day sun shines through the leaves of the forest canopy lighting the trail."
   else
-    description = "Let those who worship evil's might\nBeware my power--Green Lantern's light!"
+    description += "The slowly falling sun washes the forest canopy and it's trail in an orange glow"
 """
