@@ -1,8 +1,9 @@
-name           = "An orc"
-description    = "Big, ugly, and mean is usually what is used to describe an orc. But not this one. He is a glorious beast of a humanoid with pearly white tusks and a dark green pelt."
-target_name    = ["orc", "big orc", "glorious orc"]
-level          = 10
-difficulty_mod = "very_difficult"
+asset_type        = "npc"
+short_description = "An orc"
+long_description  = "Big, ugly, and mean is usually what is used to describe an orc. But not this one. He is a glorious beast of a humanoid with pearly white tusks and a dark green pelt."
+target_names      = ["orc", "big orc", "glorious orc"]
+level             = 10
+difficulty_mod    = "very_difficult"
 
 [hooks]
     [hooks.onTalk]

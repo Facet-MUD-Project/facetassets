@@ -1,10 +1,10 @@
-name        = "rust sword"
-description = "Just a simple rusty sword, pock-marked but tried and true."
-target_name = ["rusty sword", "sword", "simple sword"]
-type        = "weapon"
-power       = 2
-durability  = 10
-value       = 2
+asset_type        = "weapon"
+short_description = "rusty sword"
+long_description  = "Just a simple rusty sword, pock-marked but tried and true."
+target_names      = ["rusty sword", "sword", "simple sword"]
+power             = 2
+durability        = 10
+value             = 2
 
 [hooks]
     [hooks.onHit]
