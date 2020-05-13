@@ -4,7 +4,7 @@ Shared assets for the various FacetMUD implementations.
 
 This repo contains the reference world which all implementations must be able to
 render. It also contains the specifications to which all implementations must
-conform.
+conform. This is a work in progress and is bound to change.
 
 ## Data format
 
