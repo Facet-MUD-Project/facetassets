@@ -1,4 +1,4 @@
-name        = "rust sword"
+name        = "rusty sword"
 description = "Just a simple rusty sword, pock-marked but tried and true."
 target_name = ["rusty sword", "sword", "simple sword"]
 type        = "weapon"
