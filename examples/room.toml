@@ -1,5 +1,7 @@
-title = "Entrance to the spooky woods"
-description = "This is the end of the forest canopy of the spooky woods. The edge of the spooky woods opens to the edge of barely forested hills and well tended farmlands. The trail through the woods becomes a rough packed road that leads down to a walled city that can be seen to the south."
+asset_type        = "room"
+short_description = "Entrance to the spooky woods"
+long_description  = "This is the end of the forest canopy of the spooky woods. The edge of the spooky woods opens to the edge of barely forested hills and well tended farmlands. The trail through the woods becomes a rough packed road that leads down to a walled city that can be seen to the south."
+room_id           = 0
 
 [exits]
     [exits.north]
@@ -40,11 +42,11 @@ enemies = [ ["orc@woods"], [2]]
 [hooks]
     [hooks.onDescribe]
     code = """
-  var time = get_time()
-  if time >= 1800 and time <= 0600 then
+var time = get_time_in_minutes()
+if time >= 1800 and time <= 0600 then
     description +=  "Darkness permeates these woods at night making it impossible to see much of the trail for farther than a few yards."
-  else if time > 0600 and time < 1600 then
+else if time > 0600 and time < 1600 then
     description += "The early day sun shines through the leaves of the forest canopy lighting the trail."
-  else
+else
     description += "The slowly falling sun washes the forest canopy and it's trail in an orange glow"
-"""
+    """
