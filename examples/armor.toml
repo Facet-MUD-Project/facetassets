@@ -1,0 +1,16 @@
+asset_type        = "item"
+asset_components = [
+    "wearable",
+    "defensive"
+]
+short_description = "leather armor"
+long_description  = "Armor made from the cured hides of animals and beast, it doesn't provide much protection but it's better than nothing."
+target_name       = [ 
+    "leather armor", 
+    "armor", 
+    "leathers"
+]
+power             = 5
+durability        = 20
+value             = 5
+

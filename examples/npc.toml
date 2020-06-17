@@ -1,0 +1,23 @@
+asset_type        = "npc"
+asset_components  = [
+    "combative",
+    "communicative"
+]
+short_description = "An orc"
+long_description  = "Big, ugly, and mean is usually what is used to describe an orc. But not this one. He is a glorious beast of a humanoid with pearly white tusks and a dark green pelt."
+target_name       = [ 
+    "orc", 
+    "big orc", 
+    "glorious orc"
+]
+level             = 10
+difficulty_mod    = "very_difficult"
+
+[hooks]
+    [hooks.onTalk]
+        code = """
+if args.contains(target_names) then
+    send(player, \"The orc says to you, \'I know I am pretty, I am not too sure about you though.\'\")
+    send(room, player.get_name() + \" says something to the orc, who then responds.\")
+endif
+    """

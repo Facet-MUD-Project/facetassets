@@ -1,2 +1,5 @@
-zone_id = 0
-dir_name = "example_zone"
+asset_type        = "zone"
+short_description = "an example zone"
+long_description  = "A zone full of example objects that would be useful for a normal zone. A proof of concept really."
+zone_id           = 0
+dir_name          = "example_zone"
