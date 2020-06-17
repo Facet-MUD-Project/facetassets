@@ -1,7 +1,14 @@
-asset_type        = "curative"
+asset_type        = "item"
+asset_components  = [
+	"usable"
+]
 short_description = "healing potion"
 long_description  = "A bottle of green viscous liquid, a label along the side reads 'healing draught', it should heal some of your wounds if you 'drink' it."
-target_name       = ["healing potion", "green bottle", "potion"]
+target_name       = [
+	"healing potion", 
+	"green bottle", 
+	"potion"
+]
 power             = 30
 durability        = -1
 value             = 30

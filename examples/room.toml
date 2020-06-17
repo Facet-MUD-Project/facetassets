@@ -1,4 +1,8 @@
 asset_type        = "room"
+asset_components  = [
+    "container",
+    "description-hooked""
+]
 short_description = "Entrance to the spooky woods"
 long_description  = "This is the end of the forest canopy of the spooky woods. The edge of the spooky woods opens to the edge of barely forested hills and well tended farmlands. The trail through the woods becomes a rough packed road that leads down to a walled city that can be seen to the south."
 room_id           = 0

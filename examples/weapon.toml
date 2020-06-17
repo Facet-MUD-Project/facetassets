@@ -1,7 +1,16 @@
-asset_type        = "weapon"
+asset_type        = "item"
+asset_components  = [
+    "wieldable",
+    "offensive",
+    "offensive-affixed"
+]
 short_description = "rusty sword"
 long_description  = "Just a simple rusty sword, pock-marked but tried and true."
-target_name       = ["rusty sword", "sword", "simple sword"]
+target_name       = [
+    "rusty sword", 
+    "sword", 
+    "simple sword"
+]
 power             = 10
 durability        = 5
 value             = 5
